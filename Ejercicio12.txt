@@ -1,0 +1,45 @@
+Proceso
+	var prompersonas <- 0
+	var contmujeres <- 0
+	var conthombres <- 0
+	var contpersonas <- 0
+	var prommujeres <- 0
+	var promhombres <- 0
+	var contalturamuj <- 0
+	var contalturahom <- 0
+	var contedad <- 0
+	var altura <- 0
+	var edad <- 0
+	Hacer
+		var sexo
+		var edad1
+		Escribir "Ingrese la altura"
+		Leer altura
+		Si altura >= 0
+			Escribir "Ingresa el sexo, M para masculina, F para femenino"
+			Leer sexo
+			Si sexo = "M"
+				contalturahom = contalturahom + altura
+				conthombres = conthombres + 1
+			Sino
+	 			Si sexo = "F"
+					contaltuamuj = contalturamuj + altura
+					contmujeres = contmujeres +1
+				Sino
+					Escribir "No elegio ninguna de las opciones"
+				Finsi
+			FinSi
+			contpersonas = contpersonas + 1
+			Escribir "Ingresa la edad"
+			Leer edad1
+			edad <- edad + edad1
+		FinSi
+	Mientras altura >= 0
+	prommujeres <- contalturamuj/contmujeres
+	promhombres <- contalturahombres/conthombres
+	prompersonas <- edad/contpersonas
+	Escribir "El promedio de altura de las mujeres es de " + prommujeres
+	Escribir "El promedio de altura de los hombres es de " + promhombres
+	Escribir "El promedio de edad es " + prompersonas
+	
+FinProceso
